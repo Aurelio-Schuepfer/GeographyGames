@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Geography-Games-42/1.0.0": {
+        "runtime": {
+          "Geography-Games-42.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Geography-Games-42/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

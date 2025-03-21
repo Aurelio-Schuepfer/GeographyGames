@@ -1,0 +1,322 @@
+﻿<Window x:Class="Geography_Games_42.EuropaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Geography_Games_42"
+        mc:Ignorable="d"
+        Title="EuropaWindow" Height="650" Width="900" Background="#363636">
+    <Viewbox Stretch="Uniform">
+        <Grid>
+            <Image Source="/Assets/CountryMaps/EuropeMap.png" Width="900" Height="600"/>
+
+            <Button Name="FrankreichButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Frankreich_Click" Margin="223,390,620,134" RenderTransformOrigin="-0.98,2.201" Tag="Frankreich" />
+            <Button Name="LitauenButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Litauen_Click" Margin="409,300,461,270" RenderTransformOrigin="-0.98,2.201" Tag="Litauen" />
+            <Button Name="BelarusButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Belarus_Click" Margin="431,302,423,253" RenderTransformOrigin="-0.98,2.201" Tag="Belarus" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="8.52"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="NorwegenButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Norwegen_Click" Margin="200,16,642,362" RenderTransformOrigin="-0.98,2.201" Tag="Norwegen" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="13.678"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="RusslandButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Russland_Click" Margin="504,50,144,230" RenderTransformOrigin="-0.98,2.201" Tag="Russland" />
+            <Button Name="AserbaidschanButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Aserbaidschan_Click" Margin="612,487,259,87" RenderTransformOrigin="-0.98,2.201" Tag="Aserbaidschan" />
+            <Button Name="TürkeiButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Türkei_Click" Margin="794,315,53,158" RenderTransformOrigin="-0.98,2.201" Tag="Türkei" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-89.905"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="BulgarienButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Bulgarien_Click" Margin="421,467,438,116" RenderTransformOrigin="-0.98,2.201" Tag="Bulgarien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.069"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="UkraineButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Ukraine_Click" Margin="694,232,170,258" RenderTransformOrigin="-0.98,2.201" Tag="Ukraine" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-80.786"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="MoldawienButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Moldawien_Click" Margin="471,412,419,162" RenderTransformOrigin="-0.98,2.201" Tag="Moldawien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-15.044"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="RumänienButton" Background="Transparent" BorderBrush="Transparent" Canvas.Left="200" Canvas.Top="200" Click="Rumänien_Click" Margin="420,419,445,143" RenderTransformOrigin="-0.98,2.201" Tag="Rumänien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="SpanienButton" Background="Transparent" BorderBrush="Transparent" Click="Spanien_Click" Margin="181,474,667,64" RenderTransformOrigin="-0.98,2.201" Tag="Spanien" />
+
+            <TextBlock Name="LandText" HorizontalAlignment="Left" Margin="18,10,0,0" TextWrapping="Wrap" FontFamily="Comic Sans MS" Text="Finde:" TextAlignment="Left" FontSize="30" VerticalAlignment="Top" Height="41" Width="342"/>
+            <TextBlock x:Name="FeedbackText" HorizontalAlignment="Left" Margin="18,57,0,0" TextWrapping="Wrap" FontFamily="Comic Sans MS" Text="Geratenes Land" FontSize="30" VerticalAlignment="Top" Height="41" TextAlignment="Left" Width="342"/>
+            <Button Content="Zurück" HorizontalAlignment="Left" Margin="767,534,0,0" VerticalAlignment="Top" Height="56" Width="108" FontFamily="Comic Sans MS" FontSize="28" Click="Button_Click" Background="Transparent" BorderBrush="Transparent"/>
+            <TextBlock x:Name="ScoreText" HorizontalAlignment="Left" Margin="694,3,0,0" TextWrapping="Wrap" FontFamily="Comic Sans MS" Text="Score: 0/50" TextAlignment="Left" FontSize="30" VerticalAlignment="Top" Height="41" Width="190"/>
+            <Button x:Name="GriechenlandButton" Background="Transparent" BorderBrush="Transparent" Click="Griechenland_Click" Margin="406,498,454,39" RenderTransformOrigin="-0.98,2.201" Tag="Griechenland" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="TschechienButton" Background="Transparent" BorderBrush="Transparent" Click="Tschechien_Click" Margin="340,381,525,198" RenderTransformOrigin="-0.98,2.201" Tag="Tschechien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="KosovoButton" Background="Transparent" BorderBrush="Transparent" Click="Kosovo_Click" Margin="397,469,493,120" RenderTransformOrigin="-0.98,2.201" Tag="Kosovo" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="MontenegroButton" Background="Transparent" BorderBrush="Transparent" Click="Montenegro_Click" Margin="384,466,507,123" RenderTransformOrigin="-0.98,2.201" Tag="Montenegro" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="SerbienButton" Background="Transparent" BorderBrush="Transparent" Click="Serbien_Click" Margin="420,441,465,130" RenderTransformOrigin="-0.98,2.201" Tag="Serbien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-30.844"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="AlbanienButton" Background="Transparent" BorderBrush="Transparent" Click="Albanien_Click" Margin="391,479,499,96" RenderTransformOrigin="-0.98,2.201" Tag="Albanien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="NordmazedonienButton" Background="Transparent" BorderBrush="Transparent" Click="Nordmazedonien_Click" Margin="400,480,482,109" RenderTransformOrigin="-0.98,2.201" Tag="Nordmazedonien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="BosnienButton" Background="Transparent" BorderBrush="Transparent" Click="BosnienundHerzegowina_Click" Margin="392,451,495,127" RenderTransformOrigin="-0.98,2.201" Tag="Bosnien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-30.844"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="KroatienButton" Background="Transparent" BorderBrush="Transparent" Click="Kroatien_Click" Margin="373,445,514,129" RenderTransformOrigin="-0.98,2.201" Tag="Kroatien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-30.844"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="LettlandButton" Background="Transparent" BorderBrush="Transparent" Click="Lettland_Click" Margin="409,278,446,300" RenderTransformOrigin="-0.98,2.201" Tag="Lettland" />
+            <Button x:Name="EstlandButton" Background="Transparent" BorderBrush="Transparent" Click="Estland_Click" Margin="409,251,446,327" RenderTransformOrigin="-0.98,2.201" Tag="Estland" />
+            <Button x:Name="SchwedenButton" Background="Transparent" BorderBrush="Transparent" Click="Schweden_Click" Margin="257,47,585,331" RenderTransformOrigin="-0.98,2.201" Tag="Schweden" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="13.678"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="FinnlandButton" Background="Transparent" BorderBrush="Transparent" Click="Finnland_Click" Margin="411,75,441,370" RenderTransformOrigin="-0.98,2.201" Tag="Finnland" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="2.261"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="PortugalButton" Background="Transparent" BorderBrush="Transparent" Click="Portugal_Click" Margin="158,483,724,68" RenderTransformOrigin="-0.98,2.201" Tag="Portugal" />
+            <Button x:Name="IrlandButton" Background="Transparent" BorderBrush="Transparent" Click="Irland_Click" Margin="147,334,717,232" RenderTransformOrigin="-0.98,2.201" Tag="Irland" />
+            <Button x:Name="BelgienButton" Background="Transparent" BorderBrush="Transparent" Click="Belgien_Click" Margin="299,374,581,200" RenderTransformOrigin="-0.98,2.201" Tag="Belgien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-44.33"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="NiederlandeButton" Background="Transparent" BorderBrush="Transparent" Click="Niederlande_Click" Margin="248,318,632,256" RenderTransformOrigin="-0.98,2.201" Tag="Niederlande" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="32.92"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="EnglandButton" Background="Transparent" BorderBrush="Transparent" Click="England_Click" Margin="186,315,656,215" RenderTransformOrigin="-0.98,2.201" Tag="England" />
+            <Button x:Name="NordirlandButton" Background="Transparent" BorderBrush="Transparent" Click="Nordirland_Click" Margin="160,314,715,269" RenderTransformOrigin="-0.98,2.201" Tag="Nordirland" />
+            <Button x:Name="SchottlandButton" Background="Transparent" BorderBrush="Transparent" Click="Schottland_Click" Margin="172,262,679,285" RenderTransformOrigin="-0.98,2.201" Tag="Schottland" />
+            <Button x:Name="IslandButton" Background="Transparent" BorderBrush="Transparent" Click="Island_Click" Margin="32,128,774,419" RenderTransformOrigin="-0.98,2.201" Tag="Island" />
+            <Button x:Name="ItalienButton" Background="Transparent" BorderBrush="Transparent" Click="Italien_Click" Margin="432,467,399,34" RenderTransformOrigin="-0.98,2.201" Tag="Italien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-41.171"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Name="ImageButton" Margin="13,534,821,0" BorderBrush="Transparent" Background="Transparent" Click="Info_Click">
+                <Button.Content>
+                    <Image Source="pack://application:,,,/Assets/Icon/info.png" Stretch="Uniform"/>
+                </Button.Content>
+            </Button>
+            <Button x:Name="DeutschlandButton" Background="Transparent" BorderBrush="Transparent" Click="Deutschland_Click" RenderTransformOrigin="-0.98,2.201" Margin="293,342,566,188" Tag="Deutschland" />
+            <Button x:Name="SchweizButton" Background="Transparent" BorderBrush="Transparent" Click="Schweiz_Click" RenderTransformOrigin="-0.98,2.201" Margin="285,417,592,166" Tag="Schweiz" />
+            <Button x:Name="KroatienButton2" Background="Transparent" BorderBrush="Transparent" Click="Kroatien_Click" Margin="407,415,483,169" RenderTransformOrigin="-0.98,2.201" Tag="Kroatien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-97.458"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="ÖsterreichButton" Background="Transparent" BorderBrush="Transparent" Click="Österreich_Click" RenderTransformOrigin="-0.98,2.201" Margin="336,409,534,171" Tag="Österreich" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="PolenButton" Background="Transparent" BorderBrush="Transparent" Click="Polen_Click" Margin="336,245,500,312" RenderTransformOrigin="-0.98,2.201" Tag="Polen" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="3.343"/>
+                        <RotateTransform Angle="44.471"/>
+                        <TranslateTransform X="1.773" Y="-1.051"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="SlowakeiButton" Background="Transparent" BorderBrush="Transparent" Click="Slowakei_Click" Margin="371,397,486,188" RenderTransformOrigin="-0.98,2.201" Tag="Slowakei" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="UngarnButton" Background="Transparent" BorderBrush="Transparent" Click="Ungarn_Click" Margin="371,415,492,165" RenderTransformOrigin="-0.98,2.201" Tag="Ungarn" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="SlowenienButton" Background="Transparent" BorderBrush="Transparent" Click="Slowenien_Click" RenderTransformOrigin="-0.98,2.201" Margin="345,428,541,160" Tag="Slowenien" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-2.924"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="ZypernButton" Background="Transparent" BorderBrush="Transparent" Click="Zypern_Click" Margin="556,527,330,51" RenderTransformOrigin="-0.98,2.201" Tag="Zypern" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-89.905"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock x:Name="WinText" HorizontalAlignment="Left" Margin="20,174,0,0" TextWrapping="Wrap" FontFamily="Comic Sans MS" Text="Du hast gewonnen!" Foreground="green" FontSize="35" VerticalAlignment="Top" Height="108" TextAlignment="Left" Width="165" Visibility="Hidden"/>
+            <Button x:Name="Reset" Width="200" Height="70" Click="Reset_Click" Content="Reset" Background="lime" FontFamily="Comic Sans MS" FontSize="40" Margin="687,454,13,76" Visibility="Hidden"></Button>
+        </Grid>
+    </Viewbox>
+</Window>
